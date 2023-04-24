@@ -25,7 +25,7 @@ var jeditor = require("gulp-json-editor");
 ## demo gulpfile.js
 ```javascript
 
-    var qiniu = require('gulp-qn-sync')
+    var qiniu = require('gulp-qn-sync-mp')
     
     gulp.task('js', gulp.series(
     	/** 其他任务，如js，css打包预编译 */
