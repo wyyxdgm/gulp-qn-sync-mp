@@ -28,6 +28,7 @@ module.exports = function(config, options){
 
         var that = this;
         var filePath = path.relative(file.base, file.path);
+        filePath = filePath.replaceAll(new RegExp(require("path").sep, "g"), "/");
 
         if (file._contents === null) return next();
         var fileKey = options.dir + ((!options.dir || options.dir[options.dir.length - 1]) === '/' ? '' : '/') + (options.versioning ? version + '/' : '') + filePath;
